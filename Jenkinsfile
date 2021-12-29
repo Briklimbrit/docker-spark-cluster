@@ -16,7 +16,7 @@ pipeline {
     }
     stage('setup') {
       steps {
-        sh 'docker build -t cluster-apache-spark:3.0.2'
+        sh 'docker build -t cluster-apache-spark:3.0.2 .'
         sh 'docker-compose up -d'
       }
     }
